@@ -3,17 +3,25 @@
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
-# define FIG_MAX 9
+#include "ChessBoard.hpp"
+#include "Dot.hpp"
+#include "Cross.hpp"
 
 class Game 
 {
 public:
-    Game();
-    ~Game();
+    Game(int w,int h);
+    void afficherJeu(sf::RenderWindow& window);
+    void run(int x,int y,sf::RenderWindow& window,int tour);
+    bool regle(int tab[9]);
     
     
 private:
-    int *m_tableau[FIG_MAX];
+    Dot m_tab_dot[5];
+    Cross m_tab_cross[4];
+    ChessBoard m_grille;
+    int m_w,m_h;
+    int m_avancement[9]; // 0 : vide , 1 : croix , -1 : rond
 };
 
 #endif

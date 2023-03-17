@@ -14,9 +14,12 @@ Cross.o: Cross.cpp
 Dot.o: Dot.cpp
 	g++ -c "Dot.cpp" -o Dot.o
 
-thegame: ChessBoard.o Cross.o Dot.o main.o
+Game.o: Game.cpp
+	g++ -c "Game.cpp" -o Game.o
+
+thegame: Game.o ChessBoard.o Cross.o Dot.o main.o
 	@echo "** Building the game"
-	g++ -o thegame ChessBoard.o Cross.o Dot.o main.o  $(LIBS)
+	g++ -o thegame Game.o ChessBoard.o Cross.o Dot.o main.o  $(LIBS)
 
 clean:
 	@echo "** Removing object files and executable..."

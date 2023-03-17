@@ -8,6 +8,7 @@
 class Dot 
 {
 public:
+    Dot();
     Dot(int diametre);
     void draw(int x, int y);
     void display(sf::RenderWindow& window);
