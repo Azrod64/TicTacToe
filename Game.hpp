@@ -10,9 +10,10 @@ class Game
 public:
     Game();
     ~Game();
-    int *m_tableau[FIG_MAX];
-private:
     
+    
+private:
+    int *m_tableau[FIG_MAX];
 };
 
 #endif

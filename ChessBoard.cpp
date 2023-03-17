@@ -25,19 +25,8 @@ void ChessBoard::draw(int w, int h)
     vlines[3].position = sf::Vector2f(w, 2 * (h / 3));
 }
 
-void ChessBoard::display(sf::RenderWindow window)
+void ChessBoard::display(sf::RenderWindow& window)
 {
-    // Je ne comprend cette fonction
-}
-
-sf::VertexArray ChessBoard::getHlines() const
-{
-    // donne accès à la variable hlines
-    return hlines;
-}
-
-sf::VertexArray ChessBoard::getVlines() const
-{
-    // donne accès à la variable vlines
-    return vlines;
+    window.draw(hlines);
+    window.draw(vlines);
 }

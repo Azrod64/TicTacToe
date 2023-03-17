@@ -11,9 +11,7 @@ class ChessBoard
 public:
     ChessBoard();
     void draw(int w, int h);
-    void display(sf::RenderWindow window);
-    sf::VertexArray getHlines() const;
-    sf::VertexArray getVlines() const;
+    void display(sf::RenderWindow& window);
 
 private:
     sf::VertexArray hlines, vlines;

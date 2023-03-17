@@ -39,8 +39,7 @@ int main()
         // c'est ici qu'on dessine tout
         
         // dessin des lignes du plateau
-        window.draw(grille.getHlines());
-        window.draw(grille.getVlines());
+        grille.display(window);
 
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
         {
